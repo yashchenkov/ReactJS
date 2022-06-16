@@ -2,21 +2,21 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import ItemModel from './ItemModel';
 
-export default function ShopItemFunc(props) {
+function ShopItemFunc(props) {
   const { item } = props;
 
   return (
-	<div class="main-content">
+	<div className="main-content">
 	  <h2>{item.brand}</h2>
 	  <h1>{item.title}</h1>
 	  <h3>{item.description}</h3>
-	  <div class="description">
+	  <div className="description">
 	  	{item.descriptionFull}
 	  </div>
-	  <div class="highlight-window mobile"><div class="highlight-overlay"></div></div>
-      <div class="divider"></div>
-      <div class="purchase-info">
-        <div class="price">
+	  <div className="highlight-window mobile"><div className="highlight-overlay"></div></div>
+      <div className="divider"></div>
+      <div className="purchase-info">
+        <div className="price">
         <span>{item.currency}</span>
         {item.price}
         </div>
@@ -29,3 +29,5 @@ export default function ShopItemFunc(props) {
 ShopItemFunc.propTypes = {
 	item: PropTypes.instanceOf(ItemModel).isRequired
 }
+
+export default ShopItemFunc;
